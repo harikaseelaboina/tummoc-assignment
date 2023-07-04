@@ -3,9 +3,13 @@ import "./style.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { Navigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { setCookieData } from "../action";
 
 const Login = () => {
-  const [cookiedata, setCookiedata] = useState({});
+  const cookieData = useSelector((state) => state.cookie);
+  const dispatch = useDispatch();
+
   const [logData, setlogData] = useState({
     email: "",
     password: "",
@@ -20,14 +24,14 @@ const Login = () => {
 
     try {
       const response = await axios.post("http://localhost:5000/login", logData);
-      setCookiedata(response.data.cookie);
-      console.log(cookiedata);
+      dispatch(setCookieData(response.data.cookie));
+      console.log(cookieData);
     } catch (error) {
       alert(error);
     }
   };
 
-  if (cookiedata) {
+  if (cookieData) {
     return <Navigate to="/dashboard" />;
   }
   return (
