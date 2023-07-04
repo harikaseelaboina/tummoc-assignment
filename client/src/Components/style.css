@@ -1,0 +1,52 @@
+.bg1{
+    background-image: url("https://i.gifer.com/VQpq.gif");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn1{
+    padding: 10px;
+    margin-left: 2rem;
+    margin-top: 10rem;
+    font-size: large;
+    font-weight: bold;
+    border: 2px solid black;
+    width: 150px;
+}
+
+.register-form{
+    
+    background-image: url("https://res.cloudinary.com/dyylqn8vb/image/upload/v1680947832/pexels-scott-webb-305821_ahjimd.jpg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+       padding: 6%;
+    
+       
+
+}
+
+
+
+input{
+    margin-left:3px ;
+    border-radius: 5px;
+    border: 2px solid blue;
+    padding: 5px;
+        margin: 5px;
+       width:150%;
+        font-size: larger;
+   
+}
